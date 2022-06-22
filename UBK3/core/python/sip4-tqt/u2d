@@ -1,0 +1,1 @@
+urllist http://mirror.ppa.trinitydesktop.org/trinity/releases/ | grep R | sort -V | tail -n 1 | sed s/R//

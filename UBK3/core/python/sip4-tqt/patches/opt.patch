@@ -1,0 +1,12 @@
+diff -Nur orig/sipgen/sip.h mod/sipgen/sip.h
+--- orig/sipgen/sip.h	2022-04-21 17:35:12.000000000 +0200
++++ mod/sipgen/sip.h	2022-06-22 13:35:22.075336793 +0200
+@@ -23,7 +23,7 @@
+ #include <stdio.h>
+ #include <sys/types.h>
+ 
+-#include <tqt.h>
++#include </opt/trinity/include/tqt/tqt.h>
+ 
+ #ifdef TRUE
+ #undef TRUE

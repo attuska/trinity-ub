@@ -1,0 +1,9 @@
+#!/bin/sh -eux
+
+python3 configure.py \
+    -d /opt/trinity/sip \
+    -b /opt/trinity/bin \
+    -e /opt/trinity/include \
+    CXXFLAGS+='-I/opt/trinity/include' \
+    CFLAGS+='-I/opt/trinity/include'
+make
