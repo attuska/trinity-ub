@@ -1,0 +1,9 @@
+alsa-lib-dev
+audiofile-dev
+cmake-trinity
+esound-dev
+glib-dev
+jack-dev
+libmad-dev
+libvorbis-dev
+tqtinterface

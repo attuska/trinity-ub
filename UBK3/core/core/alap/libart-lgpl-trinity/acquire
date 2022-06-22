@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+libart-lgpl-trinity-${UB_VERSION}.tar.xz libart-lgpl-trinity-${UB_VERSION}/
+    http://mirror.ppa.trinitydesktop.org/trinity/releases/R${UB_VERSION}/main/dependencies/

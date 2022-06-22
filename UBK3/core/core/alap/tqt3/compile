@@ -1,0 +1,21 @@
+#!/bin/sh -eux
+
+export PREFIX=/opt/trinity
+export SYSCONFDIR=/etc/trinity
+export LIBDIR=/opt/trinity/lib
+export MANDIR=/opt/trinity/man
+export QTDIR=/opt/trinity/lib/qt3-3.3.8.d
+export PATH=/opt/trinity/qt3-3.3.8.d/bin:/opt/trinity/bin:$PATH
+export LD_LIBRARY_PATH=/opt/trinity/lib:/opt/trinity/lib/trinity:$UB_COMPILEDIR/lib
+export PKG_CONFIG_PATH=:/opt/trinity/lib/pkgconfig:/opt/trinity/qt3-3.3.8.d/lib/pkgconfig
+# Enable only one of the following:
+# export DEBUG_AUTOTOOL_OPT="--enable-debug=full"
+export DEBUG_AUTOTOOL_OPT="--disable-debug"
+
+./configure \
+    --prefix=${PREFIX} \
+    --sysconfdir=${SYSCONFDIR} \
+    --libdir=${LIBDIR} \
+    $DEBUG_AUTOTOOL_OPT
+
+gmake

@@ -1,0 +1,37 @@
+#trinity-core/alap
+tqt3
+cmake-trinity
+tqtinterface
+arts
+dbus-tqt
+dbus-1-tqt
+tqca
+libart-lgpl-trinity
+avahi-tqt
+tdelibs
+htdig
+tdebase
+#trinity-core/python
+sip4-tqt
+python-tqt
+pytdeextensions
+python-trinity
+tqscintilla
+#trinity-core/other
+tdebindings
+tdeaccessibility
+tdeutils
+tdemultimedia
+tdenetwork
+tdeadmin
+tdeartwork
+tdegames
+tdetoys
+tdeedu
+tdegraphics
+tdepim
+tdesdk
+#(Build tdesdk after installing tdepim. tdepim provides libkcal (bugzilla) hooks for tdesdk.)
+tdevelop
+#(Build tdevelop after tdesdk. tdesdk provides cvs support for tdevelop.)
+tdeaddons

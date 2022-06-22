@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+avahi-tqt-trinity-${UB_VERSION}.tar.xz avahi-tqt-trinity-${UB_VERSION}/
+    http://mirror.ppa.trinitydesktop.org/trinity/releases/R${UB_VERSION}/main/dependencies/

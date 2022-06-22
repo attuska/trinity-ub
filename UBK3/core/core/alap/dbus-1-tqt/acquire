@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+dbus-1-tqt-trinity-${UB_VERSION}.tar.xz dbus-1-tqt-trinity-${UB_VERSION}/
+    http://mirror.ppa.trinitydesktop.org/trinity/releases/R${UB_VERSION}/main/dependencies/

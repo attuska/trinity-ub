@@ -1,0 +1,45 @@
+diff -Nur orig/src/kernel/qfontdatabase_x11.cpp mod/src/kernel/qfontdatabase_x11.cpp
+--- orig/src/kernel/qfontdatabase_x11.cpp	2022-04-21 00:17:57.000000000 +0200
++++ mod/src/kernel/qfontdatabase_x11.cpp	2022-06-17 15:40:43.656275571 +0200
+@@ -54,7 +54,7 @@
+ #include <sys/mman.h>
+ 
+ #ifndef QT_NO_XFTFREETYPE
+-#include <ft2build.h>
++#include <freetype2/ft2build.h>
+ #include FT_FREETYPE_H
+ #endif
+ 
+diff -Nur orig/src/kernel/qfontengine_p.h mod/src/kernel/qfontengine_p.h
+--- orig/src/kernel/qfontengine_p.h	2022-04-21 00:17:57.000000000 +0200
++++ mod/src/kernel/qfontengine_p.h	2022-06-17 15:41:57.596570117 +0200
+@@ -306,7 +306,7 @@
+ };
+ 
+ #ifndef QT_NO_XFTFREETYPE
+-#include <ft2build.h>
++#include <freetype2/ft2build.h>
+ #include FT_FREETYPE_H
+ #include "ftxopen.h"
+ 
+@@ -476,7 +476,7 @@
+ 
+ #include "qscriptengine_p.h"
+ #include "qtextengine_p.h"
+-#include <ft2build.h>
++#include <freetype2/ft2build.h>
+ #include FT_FREETYPE_H
+ #include "ftxopen.h"
+ 
+diff -Nur orig/src/kernel/qt_x11_p.h mod/src/kernel/qt_x11_p.h
+--- orig/src/kernel/qt_x11_p.h	2022-04-21 00:17:57.000000000 +0200
++++ mod/src/kernel/qt_x11_p.h	2022-06-17 15:42:39.608741721 +0200
+@@ -151,7 +151,7 @@
+ #  ifndef QT_NO_XFTFREETYPE
+ //   This hacks around the freetype poeple putting an #error into freetype.h in 2.1.7, making
+ //   it impossible to use an updated freetype with older Xft header files.
+-#    include <ft2build.h>
++#    include <freetype2/ft2build.h>
+ #    ifdef QT_USE_XFT2_HEADER
+ #      include <X11/Xft/Xft2.h>
+ #    else

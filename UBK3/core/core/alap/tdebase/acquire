@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+tdebase-trinity-${UB_VERSION}.tar.xz tdebase-trinity-${UB_VERSION}/
+    http://mirror.ppa.trinitydesktop.org/trinity/releases/R${UB_VERSION}/main/core/

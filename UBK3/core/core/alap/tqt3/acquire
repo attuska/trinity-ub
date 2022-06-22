@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+tqt3-trinity-${UB_VERSION}.tar.xz tqt3-trinity-${UB_VERSION}/
+    http://mirror.ppa.trinitydesktop.org/trinity/releases/R${UB_VERSION}/main/dependencies/

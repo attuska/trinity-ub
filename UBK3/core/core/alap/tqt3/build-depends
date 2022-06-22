@@ -1,0 +1,9 @@
+freetype2-dev
+libjpeg-turbo-dev
+libmng-dev
+libpng-dev
+libx11-dev
+libxext-dev
+libxft-dev
+libxrandr-dev
+util-linux-dev

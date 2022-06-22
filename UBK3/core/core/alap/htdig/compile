@@ -1,0 +1,12 @@
+#!/bin/sh -eux
+
+export CFLAGS+=' -Wno-narrowing'
+export CXXFLAGS+="-Wno-narrowing -fpermissive"
+ub_compile \
+	--bindir=/usr/bin \
+	--with-config-dir=/etc/htdig \
+    --with-cgi-bin-dir=/usr/bin \
+    --with-database-dir=/var/lib/htdig/db \
+    --with-search-dir=/usr/share/doc/htdig \
+    --with-image-dir=/usr/share/doc/htdig \
+    --with-ssl

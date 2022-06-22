@@ -1,0 +1,24 @@
+#!/bin/sh -eux
+
+export PREFIX=/opt/trinity
+export SYSCONFDIR=/etc/trinity
+export LIBDIR=$PREFIX/lib
+export MANDIR=$PREFIX/man
+export TQTDIR=$PREFIX/tqt3
+export PATH=$TQTDIR/bin:$PREFIX/bin:$PATH
+export LD_LIBRARY_PATH=$LIBDIR:$LIBDIR/trinity:$UB_COMPILEDIR/lib
+export PKG_CONFIG_PATH=:$LIBDIR/pkgconfig:$TQTDIR/lib/pkgconfig
+export LIBDIRSUFFIX=
+mkdir -p build && cd build
+cmake -G "Ninja" \
+    -DCMAKE_EXPORT_COMPILE_COMMANDS="ON" \
+    -DCMAKE_BUILD_TYPE=RelWithDebInfo \
+    -DCMAKE_SKIP_RPATH="OFF" \
+    -DCMAKE_INSTALL_PREFIX=${PREFIX} \
+    -DQT_PREFIX_DIR=${PREFIX} \
+    -DSYSCONF_INSTALL_DIR=${SYSCONFDIR} \
+    -DLIB_SUFFIX=${LIBDIRSUFFIX} \
+    -DMAN_INSTALL_DIR=${MANDIR} \
+    -DBUILD_ALL="ON" \
+    -DWITH_ALL_OPTIONS="ON" ..
+cmake --build . -- -v
