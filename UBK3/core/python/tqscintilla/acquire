@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+tqscintilla-trinity-${UB_VERSION}.tar.xz tqscintilla-trinity-${UB_VERSION}/
+    http://mirror.ppa.trinitydesktop.org/trinity/releases/R${UB_VERSION}/main/dependencies/
